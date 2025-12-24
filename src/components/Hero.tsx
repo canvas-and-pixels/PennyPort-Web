@@ -42,15 +42,15 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative max-w-5xl mx-auto"
+                    className="relative max-w-sm mx-auto"
                 >
-                    <div className="relative z-10 glass rounded-[2rem] p-4 md:p-8">
-                        <div className="rounded-[1.5rem] overflow-hidden shadow-2xl shadow-black/50">
+                    <div className="relative z-10 glass rounded-[3rem] p-2 md:p-4">
+                        <div className="rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/50">
                             <Image
                                 src="/images/hero-mockup.png"
                                 alt="PennyPort Dashboard"
-                                width={1200}
-                                height={800}
+                                width={320}
+                                height={691}
                                 className="w-full h-auto"
                                 priority
                             />
@@ -58,7 +58,7 @@ export default function Hero() {
                     </div>
 
                     {/* Mockup Background Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-purple/20 to-transparent blur-3xl -z-10 transform translate-y-20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-purple/20 to-transparent blur-3xl -z-10 transform translate-y-10" />
                 </motion.div>
             </div>
         </section>
