@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,9 +20,9 @@ export default function NavBar() {
 
     const navLinks = [
         { name: "Features", href: "#features" },
-        { name: "How it Works", href: "#how-it-works" },
+        { name: "Intelligence", href: "#ai-coach" },
+        { name: "Reports", href: "#reports" },
         { name: "Pricing", href: "#pricing" },
-        { name: "Help", href: "#help" },
     ];
 
     return (
@@ -36,8 +37,13 @@ export default function NavBar() {
                 >
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-8 h-8 rounded-lg btn-primary flex items-center justify-center font-bold text-white">
-                            P
+                        <div className="relative w-8 h-8 rounded-lg overflow-hidden shrink-0">
+                            <Image
+                                src="/app-icon.png"
+                                alt="PennyPort Icon"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                         <span className="text-xl font-bold tracking-tight text-white">
                             Penny<span className="text-primary-pink">Port</span>

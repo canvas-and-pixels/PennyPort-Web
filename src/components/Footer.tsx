@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Twitter, Instagram, Github, Mail } from "lucide-react";
 
 export default function Footer() {
@@ -15,8 +16,13 @@ export default function Footer() {
                     {/* Logo & Info */}
                     <div className="md:col-span-1">
                         <Link href="/" className="flex items-center space-x-2 mb-6">
-                            <div className="w-8 h-8 rounded-lg btn-primary flex items-center justify-center font-bold text-white">
-                                P
+                            <div className="relative w-8 h-8 rounded-lg overflow-hidden shrink-0">
+                                <Image
+                                    src="/app-icon.png"
+                                    alt="PennyPort Icon"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                             <span className="text-xl font-bold tracking-tight text-white">
                                 Penny<span className="text-primary-pink">Port</span>
@@ -27,26 +33,35 @@ export default function Footer() {
                             Take control of your wealth today.
                         </p>
                         <div className="flex items-center gap-4">
-                            <Link href="#" className="text-white/40 hover:text-white transition-colors">
+                            <Link href="https://twitter.com/pennyport" target="_blank" className="text-white/40 hover:text-white transition-colors">
                                 <Twitter size={20} />
                             </Link>
-                            <Link href="#" className="text-white/40 hover:text-white transition-colors">
+                            <Link href="https://instagram.com/pennyport" target="_blank" className="text-white/40 hover:text-white transition-colors">
                                 <Instagram size={20} />
                             </Link>
-                            <Link href="#" className="text-white/40 hover:text-white transition-colors">
+                            <Link href="https://github.com/pennyport" target="_blank" className="text-white/40 hover:text-white transition-colors">
                                 <Github size={20} />
                             </Link>
+                            <a href="mailto:hello@pennyport.app" className="text-white/40 hover:text-white transition-colors">
+                                <Mail size={20} />
+                            </a>
                         </div>
                     </div>
 
                     {/* Links */}
                     <div>
-                        <h4 className="text-white font-bold mb-6">Product</h4>
+                        <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Product</h4>
                         <ul className="space-y-4">
-                            {["Features", "How it Works", "Pricing", "Roadmap"].map((item) => (
-                                <li key={item}>
-                                    <Link href={`#${item.toLowerCase().replace(/ /g, "-")}`} className="text-white/40 hover:text-white transition-colors text-sm">
-                                        {item}
+                            {[
+                                { name: "Features", href: "#features" },
+                                { name: "Intelligence Hub", href: "#ai-coach" },
+                                { name: "Visual Reports", href: "#reports" },
+                                { name: "Loan Management", href: "#loans" },
+                                { name: "Pricing", href: "#pricing" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="text-white/40 hover:text-white transition-colors text-sm">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
@@ -54,11 +69,11 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold mb-6">Company</h4>
+                        <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Company</h4>
                         <ul className="space-y-4">
                             {["About Us", "Careers", "Blog", "Contact"].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="text-white/40 hover:text-white transition-colors text-sm">
+                                    <Link href="#contact" className="text-white/40 hover:text-white transition-colors text-sm">
                                         {item}
                                     </Link>
                                 </li>
@@ -67,11 +82,11 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold mb-6">Legal</h4>
+                        <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Legal</h4>
                         <ul className="space-y-4">
                             {["Privacy Policy", "Terms of Service", "Cookie Policy", "Help Center"].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="text-white/40 hover:text-white transition-colors text-sm">
+                                    <Link href="/legal" className="text-white/40 hover:text-white transition-colors text-sm">
                                         {item}
                                     </Link>
                                 </li>

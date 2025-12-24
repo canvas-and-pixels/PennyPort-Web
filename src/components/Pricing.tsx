@@ -75,8 +75,8 @@ export default function Pricing() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className={`relative p-8 rounded-[2.5rem] ${plan.isPopular
-                                    ? "bg-white/[0.05] border-2 border-primary-purple"
-                                    : "glass"
+                                ? "bg-white/[0.05] border-2 border-primary-purple"
+                                : "glass"
                                 }`}
                         >
                             {plan.isPopular && (
@@ -123,8 +123,8 @@ export default function Pricing() {
 
                             <button
                                 className={`w-full py-4 rounded-2xl font-bold text-lg transition-all ${plan.isPopular
-                                        ? "btn-primary text-white"
-                                        : "glass hover:bg-white/[0.08] text-white"
+                                    ? "btn-primary text-white"
+                                    : "glass hover:bg-white/[0.08] text-white"
                                     }`}
                             >
                                 {plan.cta}

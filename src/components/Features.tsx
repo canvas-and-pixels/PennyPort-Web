@@ -55,13 +55,15 @@ export default function Features() {
         <section id="features" className="py-24 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                        Everything you need for <span className="text-gradient">Total Control.</span>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+                        Effortless Tracking, <span className="text-gradient">Maximum Reliability.</span>
                     </h2>
                     <p className="text-white/60 max-w-2xl mx-auto text-lg">
-                        Powerful tools designed to simplify your financial life, powered by AI.
+                        PennyPort is engineered for speed and precision, making it the most reliable
+                        budget tracker for your daily financial life.
                     </p>
                 </div>
+
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => (

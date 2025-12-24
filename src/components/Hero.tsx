@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
@@ -17,23 +18,24 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                        Finance at the <br />
-                        <span className="text-gradient">Speed of Intelligence.</span>
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-white text-balance">
+                        The Most Reliable <br />
+                        <span className="text-gradient">Expense & Budget Tracker.</span>
                     </h1>
-                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/60 mb-10">
-                        Take control with AI-driven insights, smart document management, and
-                        privacy-first tracking. The last finance tool you'll ever need.
+                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/60 mb-10 text-balance">
+                        Master your money with total precision. Experience the most efficient
+                        personal finance tool with AI-driven insights, smart document management,
+                        and privacy-first tracking.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-                        <button className="btn-primary px-8 py-4 rounded-full font-bold text-lg w-full sm:w-auto">
-                            Download for iOS/Android
-                        </button>
-                        <button className="glass px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:bg-white/5 transition-colors w-full sm:w-auto">
+                        <Link href="#pricing" className="btn-primary px-8 py-4 rounded-full font-bold text-lg w-full sm:w-auto text-center">
+                            Download Now
+                        </Link>
+                        <Link href="#features" className="glass px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 hover:bg-white/5 transition-colors w-full sm:w-auto">
                             <Play size={20} fill="currentColor" />
                             Watch Demo
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
 

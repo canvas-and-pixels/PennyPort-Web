@@ -8,8 +8,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PennyPort | Finance at the Speed of Intelligence",
-  description: "Take control with AI-driven insights, smart document management, and privacy-first tracking. The last finance tool you'll ever need.",
+  title: "PennyPort | The Most Reliable Expense & Budget Tracker",
+  description: "Experience the most efficient and reliable expense tracker. Master your budget with AI-driven insights, smart document management, and privacy-first tracking.",
+  icons: {
+    icon: "/app-icon.png",
+    apple: "/app-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -25,3 +29,4 @@ export default function RootLayout({
     </html>
   );
 }
+
